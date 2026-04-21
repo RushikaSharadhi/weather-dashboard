@@ -1,0 +1,66 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #e6f7ff;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #00b4d8;
+    color: white;
+    padding: 15px 30px;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* BLOG GRID */
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: #48cae4;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* HOVER */
+.card:hover {
+    transform: scale(1.05);
+    background: #00b4d8;
+}
+
+/* ACTIVE CLICK */
+.card.active {
+    border: 3px solid #0077b6;
+    background: #0096c7;
+}
+
+/* LINKS */
+.card a {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}

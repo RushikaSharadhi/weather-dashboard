@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weather Dashboard</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #00b4d8, #90e0ef);
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #0096c7;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.hero-img img {
+    width: 300px;
+}
+
+/* BUTTON */
+.btn {
+    background: white;
+    color: #0077b6;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #caf0f8;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* INFO BOX */
+#infoBox {
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>🌦 Weather Dashboard</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="weather.html">Weather</a>
+        <a href="blog.html">Blog</a>
+        <a href="map.html">Map</a>
+    </div>
+</div>
+
+<!-- HERO SECTION -->
+<div class="hero">
+
+    <div class="hero-text">
+        <h1>🌤 Real-Time Weather Dashboard</h1>
+        <p>
+            Get live weather updates including temperature,
+            humidity and wind speed using API integration.
+        </p>
+
+        <a href="weather.html" class="btn">Check Weather</a>
+        <a href="blog.html" class="btn">Explore Blogs</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/1146/1146869.png">
+    </div>
+
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+
+    <div class="card" onclick="showInfo('temp')">
+        🌡
+        <h3>Temperature</h3>
+        <p>Real-time temperature updates</p>
+    </div>
+
+    <div class="card" onclick="showInfo('humidity')">
+        💧
+        <h3>Humidity</h3>
+        <p>Check humidity instantly</p>
+    </div>
+
+    <div class="card" onclick="showInfo('wind')">
+        🌬
+        <h3>Wind Speed</h3>
+        <p>Live wind speed tracking</p>
+    </div>
+
+</div>
+
+<!-- INFO DISPLAY -->
+<div id="infoBox"></div>
+
+<!-- SCRIPT -->
+<script>
+function showInfo(type) {
+
+    let box = document.getElementById("infoBox");
+
+    if (type === "temp") {
+        box.innerHTML = "🌡 Temperature shows how hot or cold the environment is.";
+    }
+
+    else if (type === "humidity") {
+        box.innerHTML = "💧 Humidity indicates the amount of moisture in the air.";
+    }
+
+    else if (type === "wind") {
+        box.innerHTML = "🌬 Wind speed tells how fast the air is moving.";
+    }
+}
+</script>
+
+</body>
+</html>

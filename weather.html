@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weather App</title>
+
+<!-- ✅ Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #00b4d8, #90e0ef);
+    text-align: center;
+    padding: 40px;
+    color: white;
+}
+
+.container {
+    background: rgba(255,255,255,0.2);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 350px;
+    margin: auto;
+}
+
+input {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.weather-box {
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌦 Weather App</h1>
+
+<input type="text" id="city" placeholder="Enter city">
+<button onclick="getWeather()">Search</button>
+
+<div id="result" class="weather-box"></div>
+
+</div>
+
+<!-- ✅ JAVASCRIPT -->
+<script>
+function getWeather() {
+    let city = document.getElementById("city").value;
+
+    let apiKey = "cdf8dd7ffe87d3e39236a1b2195489f5";
+
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+
+        if (data.cod !== 200) {
+            document.getElementById("result").innerHTML = "❌ City not found";
+            return;
+        }
+
+        // ✅ SHOW WEATHER + GRAPH
+        document.getElementById("result").innerHTML =
+        `<div>
+            <h2>${data.name}</h2>
+            <h1>${data.main.temp}°C</h1>
+            <p>🌥 ${data.weather[0].main}</p>
+            <p>💧 Humidity: ${data.main.humidity}%</p>
+            <p>🌬 Wind: ${data.wind.speed} m/s</p>
+
+            <canvas id="weatherChart"></canvas>
+        </div>`;
+
+        // ✅ DRAW GRAPH
+        let ctx = document.getElementById("weatherChart");
+
+        new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["Temperature", "Humidity", "Wind"],
+                datasets: [{
+                    label: "Weather Data",
+                    data: [
+                        data.main.temp,
+                        data.main.humidity,
+                        data.wind.speed
+                    ],
+                    borderWidth: 2
+                }]
+            }
+        });
+
+    })
+    .catch(() => {
+        alert("Error fetching data");
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blog - Weather Dashboard</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: linear-gradient(to right, #00b4d8, #90e0ef);
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #0077b6;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* BLOG GRID */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+/* CARD */
+.blog-card {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+}
+
+/* BUTTON */
+.blog-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #0077b6;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .blog-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div>🌦 Weather Dashboard</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="weather.html">Weather</a>
+        <a href="blog.html">Blog</a>
+    </div>
+</div>
+
+<h1>📚 Blog Topics</h1>
+
+<!-- BLOGS -->
+<div class="blog-container">
+
+    <!-- BLOG 1 -->
+    <div class="blog-card">
+        <h3>1. Introduction</h3>
+        <p>Basics of weather dashboard</p>
+        <a href="blog1.html">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>2. What is API</h3>
+        <p>Understanding APIs</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>3. Weather API</h3>
+        <p>How APIs work</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>4. OpenWeather</h3>
+        <p>API overview</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>5. API Key</h3>
+        <p>Authentication concept</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>6. Fetch Method</h3>
+        <p>JavaScript data fetch</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>7. JSON Data</h3>
+        <p>Data format basics</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>8. Display Data</h3>
+        <p>Showing weather info</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>9. Temperature</h3>
+        <p>Units and conversion</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>10. Icons</h3>
+        <p>Weather icons usage</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>11. Error Handling</h3>
+        <p>Handling errors</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>12. UI Design</h3>
+        <p>Improving user interface</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>13. JavaScript</h3>
+        <p>Core JS concepts</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>14. CSS Styling</h3>
+        <p>Design basics</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>15. Deployment</h3>
+        <p>Hosting website</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>16. Advantages</h3>
+        <p>Benefits</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>17. Limitations</h3>
+        <p>System limits</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>18. Future Scope</h3>
+        <p>Improvements</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>19. Conclusion</h3>
+        <p>Summary</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+    <div class="blog-card">
+        <h3>20. References</h3>
+        <p>Sources used</p>
+        <a href="#">Read Blog</a>
+    </div>
+
+</div>
+
+</body>
+</html>

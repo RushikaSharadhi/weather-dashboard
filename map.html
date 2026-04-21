@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weather Map</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #00b4d8, #90e0ef);
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    padding: 20px;
+}
+
+/* MAP BOX */
+.map-container {
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🌍 India Weather Map</h1>
+
+<div class="map-container">
+
+    <!-- ✅ WORKING LIVE MAP -->
+    <iframe 
+        src="https://openweathermap.org/weathermap?basemap=map&cities=true&layer=temperature&lat=20&lon=78&zoom=5"
+        width="100%" 
+        height="100%" 
+        style="border:0;">
+    </iframe>
+
+</div>
+
+<p>☁ Live Weather Map (Temperature Layer)</p>
+
+</body>
+</html>
