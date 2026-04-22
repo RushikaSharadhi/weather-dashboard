@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rushikasharadhi.github.io/weather-dashboard/sitemap.xml
