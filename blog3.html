@@ -6,24 +6,57 @@
 <style>
 body {
     font-family: Arial;
+    margin: 0;
     background: linear-gradient(to right, #00b4d8, #90e0ef);
-    padding: 30px;
-}
-
-.container {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
     color: black;
 }
 
+/* NAVBAR */
+.navbar {
+    background: #0077b6;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* CONTAINER */
+.container {
+    background: white;
+    margin: 40px;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* HEADINGS */
 h1 {
     color: #0077b6;
 }
 
+h2 {
+    margin-top: 20px;
+}
+
+/* VIDEO */
 iframe {
     margin-top: 20px;
     border-radius: 10px;
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #0077b6;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
 }
 </style>
 
@@ -31,47 +64,58 @@ iframe {
 
 <body>
 
+<!-- NAVBAR -->
+<div class="navbar">
+    <div>🌦 Weather Dashboard</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="weather.html">Weather</a>
+        <a href="blog.html">Blog</a>
+    </div>
+</div>
+
+<!-- CONTENT -->
 <div class="container">
 
 <h1>3. Weather API</h1>
 
 <p>
-A Weather API is a service that provides real-time weather data such as temperature,
-humidity, wind speed, and weather conditions. Developers use these APIs to build
-applications that display weather information dynamically.
+A Weather API is a service that provides real-time weather information such as
+temperature, humidity, wind speed, and atmospheric conditions. These APIs are widely
+used in modern web and mobile applications to display dynamic weather data.
 </p>
 
-<h2>How Weather API Works</h2>
+<h2>How Weather APIs Work</h2>
 <p>
-Weather APIs collect data from satellites, weather stations, and sensors. This data is
-processed and made available through API endpoints. Developers send requests to these
-APIs and receive responses in JSON format.
+Weather APIs collect data from satellites, weather stations, and sensors across the world.
+This data is processed and made available through API endpoints. Developers send requests
+to these APIs using HTTP methods and receive responses in JSON format.
 </p>
 
-<h2>Example: OpenWeather API</h2>
-<p>
-In this project, we use OpenWeather API to fetch weather data. By sending a request
-with a city name and API key, we receive real-time weather details.
-</p>
-
-<h2>Steps Involved</h2>
+<h2>Working in This Project</h2>
 <ul>
 <li>User enters city name</li>
-<li>Application sends request to API</li>
-<li>API returns JSON data</li>
+<li>Application sends request to OpenWeather API</li>
+<li>API returns weather data in JSON format</li>
 <li>Data is displayed on dashboard</li>
 </ul>
 
+<h2>Example API Request</h2>
+<p>
+https://api.openweathermap.org/data/2.5/weather?q=London&appid=YOUR_API_KEY
+</p>
+
 <h2>Advantages</h2>
 <ul>
-<li>Real-time updates</li>
-<li>Accurate data</li>
-<li>Easy integration</li>
+<li>Real-time weather updates</li>
+<li>High accuracy</li>
+<li>Easy to integrate in applications</li>
 </ul>
 
 <h2>Video Explanation</h2>
 
-<!-- VIDEO -->
+<!-- YOUR VIDEO -->
 <iframe width="100%" height="315"
 src="https://www.youtube.com/embed/aQZzMJgPMqQ"
 title="Weather API Video"
@@ -80,9 +124,10 @@ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen>
 </iframe>
 
-<br><br>
+<br>
 
-<a href="blog3.pdf">⬇ Download PDF</a>
+<!-- DOWNLOAD PDF -->
+<a href="blog3.pdf" class="download-btn">⬇ Download PDF</a>
 
 </div>
 
